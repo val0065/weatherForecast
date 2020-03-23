@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Počasí</title>
+</head>
+
+<body>
+    <div class="city-input">
+        <input type="text" name="city" autocomplete="off" />
+        <label for="city" class="label-city">
+            <span class="city-name">Město</span>
+        </label>
+    </div>
+    <div class="location">
+        <h1 class="location-timezone"></h1>
+        <img class="temp-icon" src="">
+    </div>
+    <div class="temp">
+        <div class="degree">
+            <h2 class="temp-degree"></h2>
+        </div>
+        <!-- <div class="temp-description"></div> -->
+        <div class="temp-description-detail"></div>
+    </div>
+    <div class="credits">Powered by https://openweathermap.org</div>
+    <script src="app.js"></script>
+</body>
+
+</html>
