@@ -70,6 +70,66 @@ body {
     font-size: 12px;
 }
 
+.city-input {
+    width: 20%;
+    position: relative;
+    height: 50px;
+    color: black;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.city-input input {
+    width: 100%;
+    height: 100%;
+    color: #e5e5e5;
+    padding-top: 20px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.city-input label {
+    color: #e5e5e5;
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.city-input label::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #e5e5e5;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.city-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.city-input input:focus+.label-city .city-name,
+.city-input input:valid+.label-city .city-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+}
+
+.city-input input:focus+.label-city::after,
+.city-input input:valid+.label-city::after {
+    transform: translateX(0%);
+}
+
 @media only screen and (max-width: 1000px) {
     .location,
     .temp {
