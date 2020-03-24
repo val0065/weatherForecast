@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: rgb(47, 150, 163);
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
     background-image: url(./img/background.jpg);
     background-position: center;
@@ -76,7 +76,21 @@ body {
     height: 50px;
     color: black;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.city-submit {
+    background: none;
+    outline: none;
+    border: none;
+    color: #e5e5e5;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.city-submit:hover {
+    font-weight: bolder;
 }
 
 .city-input input {
@@ -87,6 +101,7 @@ body {
     border: none;
     background: none;
     outline: none;
+    font-size: 20px;
 }
 
 .city-input label {

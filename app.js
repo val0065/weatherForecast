@@ -1,14 +1,13 @@
-window.addEventListener('load', () => {
-    let long;
-    let lat;
-    let tempDescription = document.querySelector('.temp-description');
+function assignCity() {
+    let city;
     let tempDescriptionDetail = document.querySelector('.temp-description-detail');
     let tempDegree = document.querySelector('.temp-degree');
     let locationTimezone = document.querySelector('.location-timezone');
     let tempIcon = document.querySelector('.temp-icon');
+    city = document.getElementById("city").value;
 
     const proxy = 'https://cors-anywhere.herokuapp.com/';
-    const api = `${proxy}api.openweathermap.org/data/2.5/weather?q=Ostrava&lang=cz&appid=35eadc12a742fadf5f97b1c0db70121f`;
+    const api = `${proxy}api.openweathermap.org/data/2.5/weather?q=${city}&lang=cz&appid=35eadc12a742fadf5f97b1c0db70121f`;
 
     fetch(api)
         .then(response => {
@@ -18,7 +17,6 @@ window.addEventListener('load', () => {
             console.log(data);
             let celsius = Math.round(data.main.temp - 273.15) + ' °C';
             tempDegree.textContent = celsius;
-            // tempDescription.textContent = data.weather[0].main;
             let desc = data.weather[0].description;
             tempDescriptionDetail.textContent = desc.toUpperCase();
             locationTimezone.textContent = data.name;
@@ -27,4 +25,4 @@ window.addEventListener('load', () => {
             let dawn = data.sys.sunrise;
             let dusk = data.sys.sunset;
         });
-});
+}
