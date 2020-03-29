@@ -9,14 +9,14 @@
     <title>Počasí</title>
 </head>
 
-<body>
+<body onload="assignCity();">
     <div class="city-input">
         <input type="text" name="city" autocomplete="off" id="city" required />
         <label for="city" class="label-city">
             <span class="city-name">Vyberte město</span>
         </label>
     </div>
-    <input name="submit" type="submit" class="city-submit" onclick="assignCity()" value="Odeslat">
+    <input name="submit" type="submit" class="city-submit" onclick="assignCity(this.value)" value="Vyhledat">
     <div class="location">
         <h1 class="location-timezone"></h1>
         <img class="temp-icon" src="">
@@ -27,7 +27,7 @@
         </div>
         <div class="temp-description-detail"></div>
     </div>
-    <div class="credits">Powered by https://openweathermap.org</div>
+    <div class="credits">Created by valada.cz | Powered by https://openweathermap.org</div>
     <script src="app.js"></script>
 </body>
 

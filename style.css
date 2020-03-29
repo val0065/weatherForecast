@@ -147,14 +147,23 @@ body {
 
 @media only screen and (max-width: 1000px) {
     .location,
-    .temp {
+    .temp,
+    .city-input {
         width: 50%;
     }
 }
 
 @media only screen and (max-width: 550px) {
     .location,
-    .temp {
+    .temp,
+    .city-input {
         width: 80%;
+        height: 15vh;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .city-input input {
+        padding-top: 105px;
     }
 }
